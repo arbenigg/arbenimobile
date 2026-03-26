@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArbeniMobile | Ekspertët e Telefonave</title>
+    <style>
+        /* Apple Style CSS */
+        :root {
+            --bg-color: #f5f5f7;
+            --text-color: #1d1d1f;
+            --link-blue: #0066cc;
+            --white: #ffffff;
+            --gray: #86868b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-color);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 14px;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--link-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 150px 20px 100px;
+            background-color: var(--bg-color);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: var(--link-blue);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 400;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #005bb5;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-color);
+            padding: 40px 20px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 16px;
+        }
+
+        /* Products Grid */
+        .product-card {
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #e5e5ea;
+        }
+        
+        .product-card img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-color);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--gray);
+            font-size: 12px;
+            border-top: 1px solid #d2d2d7;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">ArbeniMobile</a>
+            <div class="nav-links">
+                <a href="#sherbimet">Shërbimet</a>
+                <a href="#aksesore">Aksesorë</a>
+                <a href="#telefona">Telefona</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>ArbeniMobile</h1>
+        <p>Ekspertët e telefonave. Shërbim premium, zgjidhje e shpejtë.</p>
+        <a href="#sherbimet" class="btn">Zbulo Shërbimet</a>
+    </header>
+
+    <section id="sherbimet">
+        <h2 class="section-title">Shërbimet Tona</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Servis Fizik</h3>
+                <p>Riparime profesionale për ekranet, bateritë dhe komponentët e tjerë hardware për çdo model.</p>
+            </div>
+            <div class="card">
+                <h3>Dekodime Rrjeti</h3>
+                <p>Hapja e telefonave nga të gjithë operatorët ndërkombëtarë për përdorim të lirë kudo.</p>
+            </div>
+            <div class="card">
+                <h3>FRP Bypass</h3>
+                <p>Zgjidhje e sigurt dhe e shpejtë për bllokimet nga Google Account (Factory Reset Protection).</p>
+            </div>
+            <div class="card">
+                <h3>iCloud Unlock</h3>
+                <p>Shërbim profesional për heqjen dhe menaxhimin e bllokimeve të sigurisë nga pajisjet Apple.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="aksesore">
+        <h2 class="section-title">Aksesorë Premium</h2>
+        <div class="grid">
+            <div class="product-card">
+                <div style="font-size: 50px; color: #86868b; margin-bottom: 15px;">🔌</div>
+                <h3>Adapter 35W/25W</h3>
+                <p>Karikues origjinalë dhe fast-charge për Apple & Samsung.</p>
+                <br>
+                <a href="#" style="color: var(--link-blue); text-decoration: none;">Bli Tani ></a>
+            </div>
+            <div class="product-card">
+                <div style="font-size: 50px; color: #86868b; margin-bottom: 15px;">🎧</div>
+                <h3>Kufje Wireless</h3>
+                <p>Audio perfekte me AirPods Pro 2 dhe modele të tjera premium.</p>
+                <br>
+                <a href="#" style="color: var(--link-blue); text-decoration: none;">Bli Tani ></a>
+            </div>
+            <div class="product-card">
+                <div style="font-size: 50px; color: #86868b; margin-bottom: 15px;">🛡️</div>
+                <h3>Mbrojtëse & Xhama</h3>
+                <p>Mbrojtje maksimale me kasa silicone dhe xhama privacy.</p>
+                <br>
+                <a href="#" style="color: var(--link-blue); text-decoration: none;">Bli Tani ></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="telefona" style="background-color: #fafafa;">
+        <h2 class="section-title">Telefona në Shitje</h2>
+        <p style="font-size: 20px; color: var(--gray); margin-bottom: 40px;">Zbuloni modelet më të fundit të Apple dhe Samsung, të reja dhe të përdorura me garanci.</p>
+        <a href="#" class="btn" style="background-color: var(--text-color);">Shiko Katalogun</a>
+    </section>
+
+    <footer>
+        <p>ArbeniMobile &copy; 2026. Të gjitha të drejtat të rezervuara.</p>
+        <p style="margin-top: 10px;">Adresa e lokalit tuaj | +383 4X XXX XXX | info@arbenimobile.com</p>
+    </footer>
+
+</body>
+</html>
