@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArbeniMobile | Ekspertët e Telefonave</title>
+    <title>ArbeniMobile | Ekspertët e Telefonave - Katalogu i Detajuar</title>
     <style>
         /* Apple Style CSS */
         :root {
@@ -13,6 +13,7 @@
             --white: #ffffff;
             --gray: #86868b;
             --border-color: #d2d2d7;
+            --accent-green: #34c759;
         }
 
         * {
@@ -82,26 +83,6 @@
             color: var(--link-blue);
         }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background-color: var(--white);
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            font-weight: 600;
-            letter-spacing: -0.005em;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 24px;
-            color: var(--gray);
-            margin-bottom: 30px;
-        }
-
         /* Sections */
         section {
             padding: 80px 20px;
@@ -125,41 +106,123 @@
             padding-bottom: 10px;
         }
 
-        /* Product Catalog Grid */
-        .catalog-grid {
+        /* Product Catalog Detailed Grid */
+        .catalog-grid-detailed {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
         }
 
-        .catalog-item {
+        .catalog-item-detailed {
             background-color: var(--white);
             border: 1px solid var(--border-color);
-            border-radius: 18px;
-            padding: 25px 20px;
-            text-align: center;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: left;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
         }
 
-        .catalog-item:hover {
+        .catalog-item-detailed:hover {
             transform: scale(1.02);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
         }
 
-        .item-name {
-            font-size: 17px;
-            font-weight: 500;
+        .item-image-container {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #fafafa;
+        }
+
+        .item-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .item-details {
+            margin-bottom: 20px;
+        }
+
+        .item-category-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--gray);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .item-name-detailed {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-color);
             margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 15px;
+            color: #515154;
+        }
+
+        .item-price-detailed {
+            font-size: 20px;
+            font-weight: 600;
             color: var(--text-color);
         }
 
-        .item-price {
-            font-size: 17px;
-            color: var(--gray);
+        /* Buy Section */
+        .buy-section {
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
             margin-top: auto;
+        }
+
+        .buy-now-btn {
+            background-color: var(--link-blue);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-bottom: 15px;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #005bb5;
+        }
+
+        .payment-direct-info {
+            font-size: 13px;
+            color: #515154;
+        }
+        
+        .payment-direct-info p {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .payment-direct-info p span {
+            color: var(--accent-green);
+            font-weight: 600;
+            margin-left: 5px;
         }
 
         /* Footer */
@@ -184,76 +247,102 @@
         <div class="nav-container">
             <a href="#" class="logo">ArbeniMobile</a>
             <div class="nav-links">
-                <a href="#katalogu">Katalogu</a>
+                <a href="#katalogu">Katalogu Detajuar</a>
                 <a href="#sherbimet">Shërbimet</a>
                 <a href="#telefona">Telefona</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>ArbeniMobile</h1>
-        <p>Ekspertët e telefonave. Shërbim premium, zgjidhje e shpejtë.</p>
-    </header>
-
     <section id="katalogu">
-        <h2 class="section-title">Katalogu i Aksesorëve</h2>
+        <h2 class="section-title">Katalogu i Detajuar i Aksesorëve</h2>
 
-        <h3 class="category-title">Apple</h3>
-        <div class="catalog-grid">
-            <div class="catalog-item">
-                <div class="item-name">Kabllo USB Lightning 1m</div>
-                <div class="item-price">14.99€</div>
+        <h3 class="category-title">Apple Premium Accessories</h3>
+        <div class="catalog-grid-detailed">
+            
+            <div class="catalog-item-detailed">
+                <div class="item-image-container">
+                    <img src="https://arberobotics.com/wp-content/uploads/2022/06/Arbe-Gradient-Logo.png" alt="Apple 35W Dual Port adapter, white, side view" class="item-image">
+                </div>
+                <div class="item-details">
+                    <div class="item-category-label">APPLE</div>
+                    <div class="item-name-detailed">Power Adapter 35W Dual</div>
+                    <div class="item-description">Adapter kompakt me dy porta USB-C, karikon dy pajisje njëkohësisht (p.sh., iPhone dhe Apple Watch).</div>
+                    <div class="item-price-detailed">35.00€</div>
+                </div>
+                <div class="buy-section">
+                    <a href="#" class="buy-now-btn">Blej Tani</a>
+                    <div class="payment-direct-info">
+                        <p>Blerje Direkte:</p>
+                        <p><span>Pagesa cash on delivery</span> (me dërgesë)</p>
+                    </div>
+                </div>
             </div>
-            <div class="catalog-item">
-                <div class="item-name">Kabllo USB-C 1m 60W</div>
-                <div class="item-price">14.99€</div>
-            </div>
-            <div class="catalog-item">
-                <div class="item-name">Kabllo USB-C 2m 240W</div>
-                <div class="item-price">24.99€</div>
-            </div>
-            <div class="catalog-item">
-                <div class="item-name">Power Adapter 35W</div>
-                <div class="item-price">35.00€</div>
-            </div>
-            <div class="catalog-item">
-                <div class="item-name">Power Adapter 20W</div>
-                <div class="item-price">25.00€</div>
-            </div>
-            <div class="catalog-item">
-                <div class="item-name">Battery Pack 5000mAh</div>
-                <div class="item-price">14.99€</div>
-            </div>
-            <div class="catalog-item">
-                <div class="item-name">EarPods Type C</div>
-                <div class="item-price">19.99€</div>
-            </div>
-            <div class="catalog-item">
-                <div class="item-name">EarPods Lightning</div>
-                <div class="item-price">19.99€</div>
-            </div>
-        </div>
 
-        <h3 class="category-title" style="margin-top: 60px;">Samsung</h3>
-        <div class="catalog-grid">
-            <div class="catalog-item">
-                <div class="item-name">Samsung Power Adapter 25W</div>
-                <div class="item-price">19.99€</div>
+            <div class="catalog-item-detailed">
+                <div class="item-image-container">
+                    <img src="https://arberobotics.com/wp-content/uploads/2022/06/Arbe-Gradient-Logo.png" alt="Apple Battery Pack attached to phone, white, side view" class="item-image">
+                </div>
+                <div class="item-details">
+                    <div class="item-category-label">APPLE</div>
+                    <div class="item-name-detailed">Battery Pack 5000mAh MagSafe</div>
+                    <div class="item-description">Ngjitet magnetikisht në iPhone 12/13/14/15 për karikim pa tel në lëvizje.</div>
+                    <div class="item-price-detailed">14.99€</div>
+                </div>
+                <div class="buy-section">
+                    <a href="#" class="buy-now-btn">Blej Tani</a>
+                    <div class="payment-direct-info">
+                        <p>Blerje Direkte:</p>
+                        <p><span>Pagesa cash on delivery</span> (me dërgesë)</p>
+                    </div>
+                </div>
             </div>
-            <div class="catalog-item">
-                <div class="item-name">Samsung USB-C Cable</div>
-                <div class="item-price">14.99€</div>
+
+            <div class="catalog-item-detailed">
+                <div class="item-image-container">
+                    <img src="https://arberobotics.com/wp-content/uploads/2022/06/Arbe-Gradient-Logo.png" alt="Apple EarPods Type C, white, side view" class="item-image">
+                </div>
+                <div class="item-details">
+                    <div class="item-category-label">APPLE</div>
+                    <div class="item-name-detailed">EarPods Type C</div>
+                    <div class="item-description">Kufje me tel EarPods me konektor USB-C, për pajisje moderne pa xhek 3.5mm.</div>
+                    <div class="item-price-detailed">19.99€</div>
+                </div>
+                <div class="buy-section">
+                    <a href="#" class="buy-now-btn">Blej Tani</a>
+                    <div class="payment-direct-info">
+                        <p>Blerje Direkte:</p>
+                        <p><span>Pagesa cash on delivery</span> (me dërgesë)</p>
+                    </div>
+                </div>
             </div>
-            <div class="catalog-item">
-                <div class="item-name">Samsung Powerbank 20000mAh</div>
-                <div class="item-price">49.99€</div>
+
             </div>
-        </div>
+
+        <h3 class="category-title" style="margin-top: 60px;">Samsung Premium Accessories</h3>
+        <div class="catalog-grid-detailed">
+            
+            <div class="catalog-item-detailed">
+                <div class="item-image-container">
+                    <img src="https://arberobotics.com/wp-content/uploads/2022/06/Arbe-Gradient-Logo.png" alt="Samsung Powerbank 20000mAh, black, side view" class="item-image">
+                </div>
+                <div class="item-details">
+                    <div class="item-category-label">SAMSUNG</div>
+                    <div class="item-name-detailed">Samsung Powerbank 20000mAh 25W</div>
+                    <div class="item-description">Bateri e jashtme me kapacitet të lartë, karikon shpejt pajisje të shumta në 25W.</div>
+                    <div class="item-price-detailed">49.99€</div>
+                </div>
+                <div class="buy-section">
+                    <a href="#" class="buy-now-btn">Blej Tani</a>
+                    <div class="payment-direct-info">
+                        <p>Blerje Direkte:</p>
+                        <p><span>Pagesa cash on delivery</span> (me dërgesë)</p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
         
-        <p style="text-align: center; margin-top: 40px; color: var(--gray); font-size: 14px;">
-            * Produkte të tjera do të shtohen së shpejti...
-        </p>
     </section>
 
     <footer>
