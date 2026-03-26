@@ -598,7 +598,7 @@
         </div>
     </footer>
 
-    <script>
+       <script>
         // Modal functionality
         const modal = document.getElementById('checkoutModal');
         const pName = document.getElementById('modalProductName');
@@ -622,13 +622,31 @@
             }
         }
 
-        // Handle form submission (Simulated)
+        // DËRGIMI I POROSISË NË WHATSAPP
         function submitOrder(e) {
             e.preventDefault();
-            // In a real website, this would send data to a server or email.
-            alert("Porosia u pranua me sukses! Postieri do t'ju kontaktojë së shpejti.");
+            
+            // Merr të dhënat nga formulari
+            const inputs = document.querySelectorAll('#orderForm input');
+            const emri = inputs[0].value;
+            const telefoni = inputs[1].value;
+            const adresa = inputs[2].value;
+            const produkti = pName.textContent;
+            const cmimi = pPrice.textContent;
+            
+            // Vendos numrin tënd të biznesit këtu (pa + dhe pa 0, p.sh., 38344123456)
+            const numriYT = "3834XXXXXXX"; 
+
+            // Krijo mesazhin e formatuar bukur
+            const mesazhi = `Përshëndetje ArbeniMobile! 🚀\nKam një porosi të re:\n\n🛍️ Produkti: ${produkti}\n💶 Çmimi: ${cmimi}\n\n👤 Emri: ${emri}\n📞 Telefoni: ${telefoni}\n📍 Adresa: ${adresa}\n💳 Pagesa: Cash on Delivery\n\nJu lutem më konfirmoni porosinë!`;
+
+            // Hap WhatsApp me mesazhin e gatshëm
+            const whatsappUrl = `https://wa.me/${numriYT}?text=${encodeURIComponent(mesazhi)}`;
+            window.open(whatsappUrl, '_blank');
+            
             closeModal();
         }
     </script>
+
 </body>
 </html>
