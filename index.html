@@ -682,6 +682,32 @@
                 submitBtn.disabled = false;
             });
         }
+                // FUNKSIONI I FILTRIMIT TË KATALOGUT
+        window.filterCatalog = function(brand, button) {
+            // 1. Hiq ngjyrën e errët nga të gjithë butonat
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // 2. Bëje të errët vetëm butonin që u klikua
+            if(button) {
+                button.classList.add('active');
+            }
+
+            // 3. Trego/Fshih produktet
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                const productBrand = product.getAttribute('data-brand');
+                
+                if (brand === 'te-gjitha' || productBrand === brand) {
+                    product.style.display = 'flex'; // E shfaq produktin
+                    // Shtojmë një animacion të vogël
+                    product.style.animation = 'slideUp 0.3s ease-out forwards'; 
+                } else {
+                    product.style.display = 'none'; // E fsheh produktin
+                }
+            });
+        };
+
     </script>
 
 </body>
